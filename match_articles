@@ -7,6 +7,7 @@ import time
 academics_file_path = r"C:\Users\u28o25\Desktop\Academics_Data\all_universities_academics_ascii.csv"
 articles_dir_path = r"C:\Users\u28o25\Desktop\ArticleData"  # Directory containing article files
 output_dir_path = r"C:\Users\u28o25\Desktop\Academics_Data\output_files"
+output_file_path = r"C:\Users\u28o25\Desktop\Academics_Data\final_matched_articles.csv"
 
 # Create the output directory if it doesn't exist
 os.makedirs(output_dir_path, exist_ok=True)
@@ -44,10 +45,18 @@ def process_file(file_name):
         # Load articles data
         articles_data = pd.read_excel(
             file_path,
-            usecols=["Author Full Names", "Article Title", "Source Title", "Publication Year", "Cited Reference Count"],
+            usecols=[
+                "Publication Type", "Authors", "Author Full Names", "Group Authors", "Article Title",
+                "Source Title", "Book Series Title", "Language", "Document Type", "Conference Title",
+                "Conference Date", "Conference Location", "Conference Sponsor", "Author Keywords",
+                "Keywords Plus", "Addresses", "Affiliations", "Email Addresses", "Funding Name Preferred",
+                "Cited Reference Count", "Times Cited, WoS Core", "Times Cited, All Databases", "Publisher",
+                "Publisher City", "ISSN", "eISSN", "ISBN", "Publication Date", "Publication Year", "Volume",
+                "Issue", "DOI", "Book DOI", "Number of Pages", "Research Areas"
+            ],
             engine=engine
         )
-        
+
         # Normalize and split author names
         articles_data['Author Full Names'] = articles_data['Author Full Names'].str.lower().str.strip()
         articles_data['Split Authors'] = articles_data['Author Full Names'].str.split(';')
@@ -69,25 +78,20 @@ def process_file(file_name):
         matches = articles_data_exploded.join(academics_data, on='Split Authors', how='inner')
 
         # Select and rename columns
-        matches = matches[[
-            'Split Authors', 'University Name', 'Article Title', 'Source Title', 'Publication Year', 'Cited Reference Count'
-        ]]
         matches.rename(columns={
             'Split Authors': 'Academic Name',
             'University Name': 'University',
-            'Source Title': 'Journal',
-            'Cited Reference Count': 'Citation Count'
         }, inplace=True)
 
         # Save results to a file
         matches.to_csv(output_file, index=False, encoding='utf-8-sig')
         file_end_time = time.time()
         print(f"Finished processing {file_name}: {len(matches)} matches found in {file_end_time - file_start_time:.2f} seconds.")
-        return len(matches)
+        return matches
 
     except Exception as e:
         print(f"Error processing {file_name}: {e}")
-        return 0
+        return pd.DataFrame()  # Return empty DataFrame on failure
 
 if __name__ == "__main__":
     start_time = time.time()
@@ -99,12 +103,22 @@ if __name__ == "__main__":
     # Initialize academics_data for each worker
     print(f"Using {cpu_count()} CPU cores for parallel processing...\n")
     with Pool(processes=cpu_count(), initializer=load_academics_data) as pool:
+        # Collect all matches in a list of DataFrames
         results = pool.map(process_file, file_list)
 
-    # Combine results
-    total_matches = sum(results)
+    # Combine all matches into a single DataFrame
+    all_matches = pd.concat(results, ignore_index=True)
+
+    # Remove duplicate rows where both "Article Title" and "Academic Name" (Author Name) are the same
+    print("Removing duplicate rows based on Article Title and Academic Name...")
+    duplicate_mask = all_matches.duplicated(subset=['Article Title', 'Academic Name'], keep=False)
+    all_matches = all_matches[~duplicate_mask]  # Keep only rows that are NOT duplicates
+
+    # Save the consolidated results to a single CSV file
+    all_matches.to_csv(output_file_path, index=False, encoding='utf-8-sig')
     end_time = time.time()
 
     print("\nSummary:")
-    print(f"All files processed. Total matches found: {total_matches}")
+    print(f"All files processed. Total unique matches found: {len(all_matches)}")
+    print(f"Results saved to {output_file_path}")
     print(f"Total execution time: {((end_time - start_time) / 60):.2f} minutes.")
