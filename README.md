@@ -1,6 +1,6 @@
 # CS452 Project Repository
 
-This repository contains the materials and implementations for the CS452 course project. The primary focus is on building, testing, and deploying software solutions while emphasizing practical applications and teamwork.
+This repository contains materials and implementations for the CS452 course project, focusing on analyzing academic performance data in Turkey.
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@ This repository contains the materials and implementations for the CS452 course 
 
 ## Overview
 
-The CS452 project is a comprehensive software engineering project where students work collaboratively to develop a robust and scalable application. The project includes phases of design, implementation, testing, and deployment, reflecting real-world software development practices.
+The CS452 project involves analyzing academic performance data of Turkish universities and academicians. The project includes data processing, normalization, and visualization to derive meaningful insights.
 
 ## Project Structure
 
@@ -22,13 +22,36 @@ The repository is organized as follows:
 
 ```
 cs452/
-├── src/                 # Source code
-├── tests/               # Test cases and frameworks
-├── docs/                # Documentation files
-├── data/                # Dataset or input files
-├── examples/            # Example use cases
-└── README.md            # Project overview
+├── Academics_List.ipynb
+├── Academics_Performance/
+├── FacultyPerformance/
+├── GenderColumnAdder/
+├── GenderPerformance/
+├── NamingMatching.ipynb
+├── Türkiye Akademisyen Dataları.7z
+├── University_Performances/
+├── Vakif_Devlet_Comparison/
+├── data_merger.ipynb
+├── group_articles_with_count/
+├── language_pie_plot/
+├── match_articles/
+└── merge_outputs/
 ```
+
+- `Academics_List.ipynb`: Jupyter Notebook for listing academicians.
+- `Academics_Performance/`: Directory containing scripts and data related to academic performance analysis.
+- `FacultyPerformance/`: Directory for faculty performance evaluation.
+- `GenderColumnAdder/`: Scripts for adding gender columns to datasets.
+- `GenderPerformance/`: Analysis related to performance based on gender.
+- `NamingMatching.ipynb`: Notebook for name matching and normalization.
+- `Türkiye Akademisyen Dataları.7z`: Compressed dataset of Turkish academicians.
+- `University_Performances/`: University performance analysis scripts.
+- `Vakif_Devlet_Comparison/`: Comparison between Vakıf (private) and Devlet (public) universities.
+- `data_merger.ipynb`: Notebook for merging various datasets.
+- `group_articles_with_count/`: Scripts for grouping articles with count metrics.
+- `language_pie_plot/`: Visualization scripts for language distribution in publications.
+- `match_articles/`: Scripts for matching articles across datasets.
+- `merge_outputs/`: Directory for merged output files.
 
 ## Installation
 
@@ -51,28 +74,38 @@ To set up the project on your local machine:
 
 ## Usage
 
-To run the application:
+To run the Jupyter Notebooks:
 
-1. Navigate to the `src` directory:
+1. Ensure you have Jupyter installed. If not, install it:
    ```bash
-   cd src
+   pip install jupyter
    ```
 
-2. Execute the main file:
+2. Start the Jupyter Notebook server:
    ```bash
-   python main.py
+   jupyter notebook
    ```
 
-For testing:
-```bash
-pytest tests/
-```
+3. Open the desired `.ipynb` file from the Jupyter interface.
+
+For running scripts:
+
+1. Navigate to the respective directory:
+   ```bash
+   cd Academics_Performance
+   ```
+
+2. Execute the script:
+   ```bash
+   python script_name.py
+   ```
 
 ## Features
 
-- **Feature 1:** Description of the first key feature.
-- **Feature 2:** Description of the second key feature.
-- **Feature 3:** Description of additional functionalities.
+- **Academic Performance Analysis:** Evaluate and visualize the performance of academicians.
+- **University Comparisons:** Compare performances between different types of universities.
+- **Gender-Based Analysis:** Analyze academic data with respect to gender.
+- **Data Merging and Cleaning:** Tools for merging and cleaning datasets for analysis.
 
 ## Contributing
 
