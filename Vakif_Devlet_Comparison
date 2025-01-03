@@ -56,6 +56,9 @@ yearly_performance = merged_data.groupby(['Publication Year', 'Türü']).agg({
     'Performance Score': 'mean'
 }).reset_index()
 
+# Filter data for years after 2002
+yearly_performance = yearly_performance[yearly_performance['Publication Year'] > 2003]
+
 # Pivot data for plotting
 pivoted_data = yearly_performance.pivot(index='Publication Year', columns='Türü', values='Performance Score')
 
@@ -67,7 +70,7 @@ plt.plot(pivoted_data.index, pivoted_data['Vakıf'], label='Vakıf Universities'
 
 plt.xlabel('Publication Year')
 plt.ylabel('Average Performance Score')
-plt.title('Yearly Performance of Devlet vs Vakıf Universities')
+plt.title('Yearly Performance of Devlet vs Vakıf Universities (Post-2002)')
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
