@@ -27,6 +27,7 @@ cs452/
 ├── Faculty_Performance.py
 ├── GenderColumnAdder.py
 ├── Gender_Performance.py
+├── Faculty_Statistics.py
 ├── Name_Matching.py
 ├── Türkiye Akademisyen Dataları.7z
 ├── University_Performances.py
