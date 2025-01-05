@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Define the path to the merged_data file
-merged_data_file_path = r"C:\Users\u28o25\Desktop\Academics_Data\merged_data.xlsx"
+merged_data_file_path = r"merged_data.xlsx"
 
 # Function to process and visualize the Language column
 def plot_language_distribution_bar(file_path):
