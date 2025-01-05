@@ -23,19 +23,19 @@ The repository is organized as follows:
 ```
 cs452/
 ├── Academics_List.ipynb
-├── Academics_Performance.py/
-├── Faculty_Performance.py/
-├── GenderColumnAdder.py/
-├── Gender_Performance.py/
-├── NamingMatching.ipynb
+├── Academics_Performance.py
+├── Faculty_Performance.py
+├── GenderColumnAdder.py
+├── Gender_Performance.py
+├── Name_Matching.py
 ├── Türkiye Akademisyen Dataları.7z
-├── University_Performances.py/
-├── Vakif_Devlet_Comparison.py/
-├── data_merger.ipynb
-├── group_articles_with_count.py/
-├── language_pie_plot.py/
-├── match_articles.py/
-└── merge_outputs.py/
+├── University_Performances.py
+├── Vakif_Devlet_Comparison.py
+├── Data_Merger.py
+├── Group_Articles_With_Count.py
+├── Language_Pie_Plot.py
+├── Match_Articles.py
+└── Merge_Outputs.py
 ```
 
 - `Academics_List.ipynb`: Jupyter Notebook for listing academicians.
