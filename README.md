@@ -92,12 +92,12 @@ For running scripts:
 
 1. Navigate to the respective directory:
    ```bash
-   cd Academics_Performance
+   cd Directory_Name
    ```
 
 2. Execute the script:
    ```bash
-   python script_name.py
+   python ${script_name}.py
    ```
 
 ## Features
