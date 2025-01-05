@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 import re
 
 # File paths
-file_path = r"C:\Users\u28o25\Desktop\Academics_Data\final_matched_articles_with_details.csv"
-output_csv = r"C:\Users\u28o25\Desktop\Academics_Data\faculty_yearly_publications.csv"
+file_path = r"final_matched_articles_with_details.csv"
+output_csv = r"faculty_yearly_publications.csv"
 
 # Function to extract faculty information from the Details column
 def extract_faculty(details):
