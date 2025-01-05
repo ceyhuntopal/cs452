@@ -2,8 +2,8 @@ import pandas as pd
 import os
 
 # Define file paths
-input_file_path = r"C:\Users\u28o25\Desktop\Academics_Data\merged_results.csv"
-output_file_path = r"C:\Users\u28o25\Desktop\Academics_Data\academics_with_articles.csv"
+input_file_path = r"merged_results.csv"
+output_file_path = r"academics_with_articles.csv"
 
 def combine_articles_by_academic():
     """ Combine all articles for each academic into the same row with article count """
