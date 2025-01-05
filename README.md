@@ -125,11 +125,6 @@ We welcome contributions! To contribute:
    git push origin feature-name
    ```
 5. Open a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code as per the terms of the license.
-
 ---
 
 For further questions, please contact the repository maintainer or open an issue in the GitHub tracker.
