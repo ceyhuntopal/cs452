@@ -24,7 +24,7 @@ The repository is organized as follows:
 cs452/
 ├── Academics_List.ipynb
 ├── Academics_Performance/
-├── FacultyPerformance/
+├── Faculty_Performance/
 ├── GenderColumnAdder/
 ├── GenderPerformance/
 ├── NamingMatching.ipynb
