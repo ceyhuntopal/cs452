@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load data
-file_path = r"C:\Users\u28o25\Desktop\Academics_Data\final_matched_articles_with_gender.csv"
+file_path = r"final_matched_articles_with_gender.csv"
 data = pd.read_csv(file_path)
 
 # Group by Academic Name and University to calculate individual metrics
