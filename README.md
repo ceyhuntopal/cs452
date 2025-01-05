@@ -10,7 +10,6 @@ This repository contains materials and implementations for the CS452 course proj
 - [Usage](#usage)
 - [Features](#features)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 
@@ -25,7 +24,7 @@ cs452/
 ├── Academics_List.ipynb
 ├── Academics_Performance.py
 ├── Faculty_Performance.py
-├── GenderColumnAdder.py
+├── Gender_Column_Adder.py
 ├── Gender_Performance.py
 ├── Faculty_Statistics.py
 ├── Name_Matching.py
@@ -68,18 +67,18 @@ To set up the project on your local machine:
    cd cs452
    ```
 
-3. Install dependencies (if applicable):
+3. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
 ## Usage
 
-To run the Jupyter Notebooks:
+To run the Jupyter source files:
 
-1. Ensure you have Jupyter installed. If not, install it:
+1. Ensure you have Jupyter Notebook installed. If not, install it:
    ```bash
-   pip install jupyter
+   pip install notebook
    ```
 
 2. Start the Jupyter Notebook server:
@@ -87,7 +86,7 @@ To run the Jupyter Notebooks:
    jupyter notebook
    ```
 
-3. Open the desired `.ipynb` file from the Jupyter interface.
+3. Open the desired `.ipynb` file from the Jupyter Notebook interface.
 
 For running scripts:
 
