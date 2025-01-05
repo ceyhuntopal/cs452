@@ -3,8 +3,8 @@ import os
 import time
 
 # Define the input and output paths
-output_dir_path = r"C:\Users\u28o25\Desktop\Academics_Data\output_files"
-final_output_path = r"C:\Users\u28o25\Desktop\Academics_Data\merged_results.csv"
+output_dir_path = r"Academics_Data\output_files"
+final_output_path = r"Academics_Data\merged_results.csv"
 
 def merge_output_files():
     """ Merge all individual output CSV files into one combined file """
