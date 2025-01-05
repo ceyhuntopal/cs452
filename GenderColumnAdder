@@ -1,9 +1,9 @@
 import pandas as pd
 
 # File paths
-input_file = r"C:\Users\u28o25\Desktop\Academics_Data\final_matched_articles.csv"  # Input CSV file from the previous step
-gender_file = r"C:\Users\u28o25\Desktop\Academics_Data\all_universities_academics_with_gender.xlsx"  # Gender file
-output_file = r"C:\Users\u28o25\Desktop\Academics_Data\final_matched_articles_with_gender.csv"  # Output CSV file with gender column
+input_file = r"final_matched_articles.csv"  # Input CSV file from the previous step
+gender_file = r"all_universities_academics_with_gender.xlsx"  # Gender file
+output_file = r"final_matched_articles_with_gender.csv"  # Output CSV file with gender column
 
 def add_gender_column(input_file, gender_file, output_file):
     try:
