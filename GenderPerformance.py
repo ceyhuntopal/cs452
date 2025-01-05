@@ -54,7 +54,7 @@ plt.grid(True)
 plt.tight_layout()
 
 # Save the plot
-plot_path = r"C:\Users\u28o25\Desktop\Academics_Data\gender_performance_yearly_updated_v2_plot.png"
+plot_path = r"gender_performance_yearly_updated_v2_plot.png"
 plt.savefig(plot_path)
 print(f"Plot saved to {plot_path}")
 plt.show()
