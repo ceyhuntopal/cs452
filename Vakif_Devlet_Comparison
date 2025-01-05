@@ -4,9 +4,9 @@ import unicodedata
 import re
 
 # File paths
-universities_file_path = r"C:\Users\u28o25\Desktop\Academics_Data\Turkiye_Universiteleri_Sehirleriyle.xlsx"
-articles_file_path = r"C:\Users\u28o25\Desktop\Academics_Data\final_matched_articles_with_gender.csv"
-output_file_path = r"C:\Users\u28o25\Desktop\Academics_Data\vakif_vs_devlet_performance.csv"
+universities_file_path = r"Turkiye_Universiteleri_Sehirleriyle.xlsx"
+articles_file_path = r"final_matched_articles_with_gender.csv"
+output_file_path = r"vakif_vs_devlet_performance.csv"
 
 def normalize_to_english(name):
     """
