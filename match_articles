@@ -4,10 +4,10 @@ from multiprocessing import Pool, cpu_count, current_process
 import time
 
 # Define file paths
-academics_file_path = r"C:\Users\u28o25\Desktop\Academics_Data\all_universities_academics_ascii.csv"
-articles_dir_path = r"C:\Users\u28o25\Desktop\ArticleData"  # Directory containing article files
-output_dir_path = r"C:\Users\u28o25\Desktop\Academics_Data\output_files"
-output_file_path = r"C:\Users\u28o25\Desktop\Academics_Data\final_matched_articles.csv"
+academics_file_path = r"all_universities_academics_ascii.csv"
+articles_dir_path = r"ArticleData"  # Directory containing article files
+output_dir_path = r"output_files"
+output_file_path = r"final_matched_articles.csv"
 
 # Create the output directory if it doesn't exist
 os.makedirs(output_dir_path, exist_ok=True)
