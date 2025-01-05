@@ -59,7 +59,7 @@ plt.tight_layout()
 plt.show()
 
 # Save the filtered university-level results
-output_path = r"C:\Users\u28o25\Desktop\Academics_Data\filtered_university_performance_vs_articles.csv"
+output_path = r"filtered_university_performance_vs_articles.csv"
 filtered_university_grouped.to_csv(output_path, index=False, encoding='utf-8-sig')
 
 print(f"Filtered results saved to {output_path}")
