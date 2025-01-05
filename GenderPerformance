@@ -2,8 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # File paths
-articles_file_path = r"C:\Users\u28o25\Desktop\Academics_Data\final_matched_articles_with_gender.csv"
-output_file_path = r"C:\Users\u28o25\Desktop\Academics_Data\gender_performance_yearly_updated_v2.csv"
+articles_file_path = r"final_matched_articles_with_gender.csv"
+output_file_path = r"gender_performance_yearly_updated_v2.csv"
 
 # Load data
 print("Loading articles data...")
