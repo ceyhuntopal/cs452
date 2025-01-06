@@ -35,7 +35,8 @@ cs452/
 ├── Group_Articles_With_Count.py
 ├── Language_Pie_Plot.py
 ├── Match_Articles.py
-└── Merge_Outputs.py
+├── Merge_Outputs.py
+└── requirements.txt
 ```
 
 - `Academics_List.ipynb`: Jupyter Notebook for listing academicians.
